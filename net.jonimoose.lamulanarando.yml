@@ -1,0 +1,37 @@
+id: net.jonimoose.LaMulanaRando
+runtime: org.freedesktop.Platform
+runtime-version: '23.08'
+sdk: org.freedesktop.Sdk
+sdk-extensions:
+  - org.freedesktop.Sdk.Extension.openjdk
+command: run.sh
+modules:
+  - name: openjdk
+    buildsystem: simple
+    build-commands:
+      - /usr/lib/sdk/openjdk/install.sh
+  - name: lamulanarando
+    buildsystem: simple
+    build-commands:
+      - install -D randomizer-2.36.0.jar /app/bin/randomizer-2.36.0.jar
+      - install -D run.sh /app/bin/run.sh
+      - install -D net.jonimoose.lamulanarando.desktop /app/share/applications/net.jonimoose.LaMulanaRando.desktop
+      - install -D faceplant128.png /app/share/icons/hicolor/128x128/apps/net.jonimoose.LaMulanaRando.faceplant.png
+      - install -D net.jonimoose.LaMulanaRandomizer.metainfo.xml /app/share/metainfo/net.jonimoose.LaMulanaRandomizer.metainfo.xml
+    sources:
+      - type: file
+        url: https://github.com/thezerothcat/LaMulanaRandomizer/releases/download/2.36.0/randomizer-2.36.0.jar
+        sha256: 6cd918060d5b4485e42f546c35e05e98a9a7ce889174da1b89b2dd019240a910
+      - type: file
+        path: run.sh
+      - type: file
+        path: faceplant128.png
+      - type: file
+        path: net.jonimoose.lamulanarando.desktop
+      - type: file
+        path: net.jonimoose.LaMulanaRandomizer.metainfo.xml
+finish-args: 
+  - --env=PATH=/app/jre/bin:/app/bin:/usr/bin
+  - --share=ipc
+  - --socket=x11
+  - --filesystem=host

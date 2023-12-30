@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>net.jonimoose.LaMulanaRandomizer</id>
+  
+  <name>La-Mulana Randomizer</name>
+  <summary>Randomizer for La-Mulana Remake</summary>
+  
+  <metadata_license>MIT</metadata_license>
+  <project_license>BSD-2-Clause</project_license>
+  
+  <description>
+    <p>
+      Randomizer for La-Mulana Remake
+    </p>
+  </description>
+  
+  <launchable type="desktop-id">net.jonimoose.LaMulanaRando.desktop</launchable>
+</component>
