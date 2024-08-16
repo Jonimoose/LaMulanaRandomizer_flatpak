@@ -16,7 +16,7 @@ modules:
       - install -D randomizer-2.36.0.jar /app/bin/randomizer-2.36.0.jar
       - install -D run.sh /app/bin/run.sh
       - install -D net.jonimoose.lamulanarando.desktop /app/share/applications/net.jonimoose.LaMulanaRando.desktop
-      - install -D faceplant128.png /app/share/icons/hicolor/128x128/apps/net.jonimoose.LaMulanaRando.faceplant.png
+      - install -D RandoIcon128.png /app/share/icons/hicolor/128x128/apps/net.jonimoose.LaMulanaRando.RandoIcon.png
       - install -D net.jonimoose.LaMulanaRandomizer.metainfo.xml /app/share/metainfo/net.jonimoose.LaMulanaRandomizer.metainfo.xml
     sources:
       - type: file
@@ -25,7 +25,7 @@ modules:
       - type: file
         path: run.sh
       - type: file
-        path: faceplant128.png
+        path: RandoIcon128.png
       - type: file
         path: net.jonimoose.lamulanarando.desktop
       - type: file
@@ -34,4 +34,4 @@ finish-args:
   - --env=PATH=/app/jre/bin:/app/bin:/usr/bin
   - --share=ipc
   - --socket=x11
-  - --filesystem=host
+  - --filesystem=home

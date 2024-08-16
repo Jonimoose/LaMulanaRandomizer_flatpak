@@ -1,5 +1,7 @@
 [Desktop Entry]
 Name=La-Mulana Randomizer
+Comment=Randomizer for Nigoro's La-Mulana Video Game
 Exec=
 Type=Application
-Icon=net.jonimoose.LaMulanaRando.faceplant
+Categories=Game;
+Icon=net.jonimoose.LaMulanaRando.RandoIcon
